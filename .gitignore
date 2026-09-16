@@ -1,0 +1,36 @@
+# Secrets — NEVER commit
+.env
+.env.local
+.env.*.local
+*.key
+*.pem
+
+# Deps
+node_modules/
+.expo/
+.expo-shared/
+.web/
+dist/
+build/
+.next/
+out/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Supabase
+supabase/.branches
+supabase/.temp
+
+# Expo
+.expo/
+web-build/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+
+# Secrets scan
+.gitleaks/

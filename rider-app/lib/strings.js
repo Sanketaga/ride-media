@@ -1,0 +1,23 @@
+// Hinglish — single source for Rider App
+export const t = {
+  appName: "Ride Media",
+  startEarning: "Start Earning — Kamao Shuru Karo",
+  stopEarning: "Stop — Band Karo",
+  today: "Aaj Ka",
+  rawKm: "Raw KM",
+  ekm: "eKM (Effective)",
+  earnings: "Kamaai",
+  wallet: "Wallet",
+  nextCheck: "Agle selfie check ka time",
+  campaign: "Campaign",
+  daysLeft: "Din baaki",
+  startSelfieTitle: "Shirt pehno, selfie lo",
+  startSelfieDesc: "Front 5s video + Back photo. 2 min me approve.",
+  stationaryNote: "Selfie tabhi aayega jab gadi ruki ho (45 sec). Riding me nahi.",
+  ledger: "Hisab — Ledger",
+  mapReplay: "Map Replay Dekho",
+  balance: "Balance",
+  payout: "Payout",
+  pauseDays: "4 din pause milenge — bimar ho to use karo",
+  helmet: "Helmet pehno, safe chalo. Speed ka paisa nahi milta.",
+};
