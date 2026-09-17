@@ -7,24 +7,52 @@
     "icon": "./assets/icon.png",
     "scheme": "ridemedia",
     "userInterfaceStyle": "light",
-    "splash": { "backgroundColor": "#0F172A", "resizeMode": "contain", "image": "./assets/splash.png" },
-    "assetBundlePatterns": ["**/*"],
-    "ios": { "supportsTablet": true, "infoPlist": { "UIBackgroundModes": ["location", "fetch"] } },
+    "splash": {
+      "backgroundColor": "#0F172A",
+      "resizeMode": "contain",
+      "image": "./assets/splash.png"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "infoPlist": {
+        "UIBackgroundModes": [
+          "location",
+          "fetch"
+        ]
+      }
+    },
     "android": {
       "package": "com.ridemedia.rider",
-      "adaptiveIcon": { "foregroundImage": "./assets/adaptive-icon.png", "backgroundColor": "#0F172A" },
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#0F172A"
+      },
       "permissions": [
         "android.permission.ACCESS_COARSE_LOCATION",
         "android.permission.ACCESS_FINE_LOCATION",
         "android.permission.FOREGROUND_SERVICE",
         "android.permission.CAMERA",
         "android.permission.RECORD_AUDIO"
-      ],
-      "config": { "googleMaps": { "apiKey": "YOUR_MAPS_KEY" } }
+      ]
     },
     "plugins": [
-      ["expo-location", { "locationAlwaysAndWhenInUsePermission": "Ride Media uses location only while you tap Start Earning — to verify KM while wearing the shirt. | Ride Media sirf jab aap Start karte ho tab location use karta hai." }],
-      ["expo-camera", { "cameraPermission": "Needed for selfie verification while wearing shirt." }]
+      [
+        "expo-location",
+        {
+          "locationAlwaysAndWhenInUsePermission": "Ride Media uses location only while you tap Start Earning."
+        }
+      ],
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Needed for selfie verification while wearing shirt."
+        }
+      ],
+      "expo-secure-store",
+      "expo-asset"
     ]
   }
 }
