@@ -26,6 +26,13 @@ supabase/.temp
 # Expo
 .expo/
 web-build/
+android/
+ios/
+
+# Local backups — don't commit
+rider-app-assets.bak/
+rider-app.env.bak
+rider-app/*.bak
 
 # Logs
 npm-debug.log*
