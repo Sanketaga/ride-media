@@ -28,17 +28,17 @@ export default function Brands() {
       const path = `leads/${Date.now()}-${file.name}`;
       const { error: upErr } = await supabase.storage.from('ad-images').upload(path, file, { contentType: file.type });
       if (upErr) throw upErr;
-      // 2. Insert lead
-      const { error } = await supabase.from('leads').insert({
-        brand_name: form.brand_name,
-        phone: form.phone,
-        email: form.email || null,
-        ad_image_url: path,
-        shirt_background: form.shirt_background,
-        shirt_type: 'Round Neck 180 GSM',
-        days: form.days,
-        zone_pincodes: form.pincodes,
-        message: form.message || null,
+      // 2. Insert lead via RPC (security definer, bypasses RLS for anon)
+      const { data: newId, error } = await supabase.rpc('insert_lead', {
+        p_brand_name: form.brand_name,
+        p_phone: form.phone,
+        p_email: form.email || null,
+        p_ad_image_url: path,
+        p_shirt_background: form.shirt_background,
+        p_shirt_type: 'Round Neck 180 GSM',
+        p_days: form.days,
+        p_zone_pincodes: form.pincodes,
+        p_message: form.message || null,
       });
       if (error) throw error;
       setDone(true);
