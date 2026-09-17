@@ -1,3 +1,6 @@
+import { URL, URLSearchParams } from 'react-native-url-polyfill';
+global.URL = URL;
+global.URLSearchParams = URLSearchParams;
 import { createClient } from '@supabase/supabase-js';
 import * as SecureStore from 'expo-secure-store';
 

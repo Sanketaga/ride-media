@@ -1,3 +1,6 @@
+import { URL, URLSearchParams } from 'react-native-url-polyfill';
+global.URL = URL;
+global.URLSearchParams = URLSearchParams;
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { StatusBar } from 'expo-status-bar';
